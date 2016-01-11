@@ -15,25 +15,21 @@ module FormtasticBootstrap
     self.action_class_finder = ::Formtastic::ActionClassFinder
 
     def self.default_error_class
-      # self.default_inline_error_class
-      raise
+      self.default_inline_error_class
     end
 
     def self.default_error_class=(error_class)
-      # self.default_inline_error_class = error_class
-      # self.default_block_error_class = error_class
-      raise
+      self.default_inline_error_class = error_class
+      self.default_block_error_class = error_class
     end
 
     def self.default_hint_class
-      # self.default_inline_hint_class
-      raise
+      self.default_inline_hint_class
     end
 
     def self.default_hint_class=(hint_class)
-      # self.default_inline_hint_class = hint_class
-      # self.default_block_hint_class = hint_class
-      raise
+      self.default_inline_hint_class = hint_class
+      self.default_block_hint_class = hint_class
     end
 
     include FormtasticBootstrap::Helpers::InputsHelper

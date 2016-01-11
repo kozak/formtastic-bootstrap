@@ -159,6 +159,19 @@ describe 'text input' do
     end
   end
 
+  context "When a hint is provided" do
+    before do
+      output_buffer.replace ''
+    end
+
+    it "should render the hint" do
+      concat(semantic_form_for(@new_post) do |builder|
+        concat(builder.input(:title, :as => :text, :hint=>"Test hint"))
+      end)
+      output_buffer.should have_tag("form div.form-group span.form-wrapper .help-block")
+    end
+  end
+
   context "when :cols is missing in :input_html" do
     before do
       output_buffer.replace ''
